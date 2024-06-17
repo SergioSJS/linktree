@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Emerson | Linktree</title>
+    <title>Meio-Orc - 1/2 Orc</title>
     <!-- Favicon -->
-    <link rel="icon" href="https://avatars0.githubusercontent.com/u/43749971" type="image/x-icon" />
+    <link rel="icon" href="assets\avatart2.png" type="image/x-icon" />
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!-- Core theme CSS -->
@@ -13,59 +13,61 @@
   </head>
 
   <body>
+    <div class="background">
+      <canvas canvas id="diceCanvas"></canvas>
+    </div>
     <!-- Parallax Pixel Background Animation -->
-    <section class="animated-background">
+    <!-- <section class="animated-background">
       <div id="stars1"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-    </section>
+    </section> -->
     <!-- End of Parallax Pixel Background Animation -->
 
     <a id="profilePicture" href="#popup">
-      <img src="https://avatars0.githubusercontent.com/u/43749971" alt="Profile Picture">
+      <img src="assets\avatart2.png" alt="Profile Picture">
     </a>
 
     <div class="overlay" id="popup">
       <div class="popup">
         <div class="popup-photo">
-          <a href="https://avatars0.githubusercontent.com/u/43749971" target="_blank">
-            <img src="https://avatars0.githubusercontent.com/u/43749971" alt="Profile Picture">
+          <a href="assets\avatart2.png" target="_blank">
+            <img src="assets\avatart2.png" alt="Profile Picture">
           </a>
         </div>
         <div class="popup-quote">
-          But... the sensation that I've lost something lingers for a longtime after I wake up.
+          Grab your towel and don't panic
         </div>
         <a class="popup-close" onclick="history.back()">&times;</a>
       </div>
     </div>
 
     <div id="userName">
-      @johnggli
+      @sergiosjs
     </div>
 
     <div id="links">
-      <a class="link" href="https://github.com/johnggli" target="_blank">
-        <i class="fab fa-github">&nbsp;</i>Github
+      <a class="link" href="https://www.youtube.com/@meioorc" target="_blank">
+        <i class="fab fa-youtube">&nbsp;</i>YouTube
       </a>
-      <a class="link" href="https://www.linkedin.com/in/johnggli" target="_blank">
-        <i class="fab fa-linkedin">&nbsp;</i>Linkedin
-      </a>
-      <a class="link" href="https://www.facebook.com/johnggli" target="_blank">
-        <i class="fab fa-facebook">&nbsp;</i>Facebook
-      </a>
-      <a class="link" href="https://www.instagram.com/johnggli" target="_blank">
+      <a class="link" href="https://www.instagram.com/meio.orc" target="_blank">
         <i class="fab fa-instagram">&nbsp;</i>Instagram
       </a>
-      <a class="link" href="https://twitter.com/johnggli" target="_blank">
+      <a class="link" href="https://www.instagram.com/sergiosjs" target="_blank">
+        <i class="fab fa-instagram">&nbsp;</i>Instagram
+      </a>
+      <a class="link" href="https://twitter.com/sergiosjs" target="_blank">
         <i class="fab fa-twitter">&nbsp;</i>Twitter
       </a>
-      <a class="link" href="https://myanimelist.net/profile/johnggli" target="_blank">
-        <i class="fa fa-play-circle">&nbsp;</i>MyAnimeList
+      <a class="link" href="https://sergiosjs.github.io/ironsworn_oracle/" target="_blank">
+        <i class="fa fa-shield-alt">&nbsp;</i>Oráculo - Ironsworn
       </a>
     </div>
 
     <div id="hashtag">
-      #BeHappy❤
+      #dontpanic
     </div>
+
+    <script src="assets/dice-animation.js"></script>
   </body>
 </html>
