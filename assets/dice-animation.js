@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const diceImages = [];
-const numDice = 6;
+const numDice = parseInt(canvas.dataset.diceCount) || 6;
 const diceSize = 50;
 const imagePaths = [
     'assets/dices/d4.png',
@@ -16,25 +16,12 @@ const imagePaths = [
     'assets/dices/d20.png'
 ];
 
-let imagesLoaded = 0;
-
-// Function to load images
-function loadImages(paths, callback) {
-    paths.forEach((path, index) => {
-        const img = new Image();
-        img.src = path;
-        img.onload = () => {
-            imagesLoaded++;
-            if (imagesLoaded === paths.length) {
-                callback();
-            }
-        };
-        img.onerror = () => {
-            console.error(`Failed to load image: ${path}`);
-        };
-        diceImages[index] = img;
-    });
-}
+// Carregar imagens em paralelo
+imagePaths.forEach((path, index) => {
+    const img = new Image();
+    img.src = path;
+    diceImages[index] = img;
+});
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -109,9 +96,8 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-loadImages(imagePaths, () => {
-    animate();
-});
+// Iniciar animação imediatamente
+animate();
 
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;

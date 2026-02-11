@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Links do Meio-Orc - YouTube, Instagram, jogos indie e aplicações de RPG">
+    <meta name="theme-color" content="#442222">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Meio-Orc - 1/2 Orc">
+    <meta property="og:description" content="Links do Meio-Orc - YouTube, Instagram, jogos indie e aplicações de RPG">
+    <meta property="og:image" content="assets/meioorc.gif">
+    <meta property="og:type" content="website">
     <title>Meio-Orc - 1/2 Orc</title>
+    <!-- Preload dice images -->
+    <link rel="preload" href="assets/dices/d4.png" as="image">
+    <link rel="preload" href="assets/dices/d6.png" as="image">
+    <link rel="preload" href="assets/dices/d8.png" as="image">
+    <link rel="preload" href="assets/dices/d10.png" as="image">
+    <link rel="preload" href="assets/dices/d12.png" as="image">
+    <link rel="preload" href="assets/dices/d20.png" as="image">
     <!-- Favicon -->
-    <link rel="icon" href="assets\avatart2.png" type="image/x-icon" />
+    <link rel="icon" href="assets/avatart2.png" type="image/x-icon" />
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!-- Core theme CSS -->
@@ -14,25 +28,22 @@
 
   <body>
     <div class="background">
-      <canvas canvas id="diceCanvas"></canvas>
+      <canvas id="diceCanvas" data-dice-count="6"></canvas>
     </div>
-    <!-- Parallax Pixel Background Animation -->
-    <!-- <section class="animated-background">
-      <div id="stars1"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-    </section> -->
-    <!-- End of Parallax Pixel Background Animation -->
+
+    <div id="banner">
+      <img src="assets/meioorc-onlytext-crop.png" alt="Meio-Orc Banner">
+    </div>
 
     <a id="profilePicture" href="#popup">
-      <img src="assets\meioorc.gif" alt="Profile Picture">
+      <img src="assets/meioorc.gif" alt="Profile Picture">
     </a>
 
     <div class="overlay" id="popup">
       <div class="popup">
         <div class="popup-photo">
-          <a href="assets\meioorc.gif" target="_blank">
-            <img src="assets\meioorc.gif" alt="Profile Picture">
+          <a href="assets/meioorc.gif" target="_blank">
+            <img src="assets/meioorc.gif" alt="Avatar animado do Meio-Orc">
           </a>
         </div>
         <div class="popup-quote">
@@ -47,41 +58,47 @@
     </div>
 
     <div id="links">
-      <a class="link" href="https://www.youtube.com/@meioorc" target="_blank">
-        <i class="fab fa-youtube">&nbsp;</i>YouTube
-      </a>
-      <a class="link" href="https://www.instagram.com/meio.orc" target="_blank">
-        <i class="fab fa-instagram">&nbsp;</i>Instagram @meio.orc
-      </a>
-      <a class="link" href="https://www.instagram.com/sergiosjs" target="_blank">
-        <i class="fab fa-instagram">&nbsp;</i>Instagram @sergiosjs
-      </a>
-      <a class="link" href="https://twitter.com/sergiosjs" target="_blank">
-        <i class="fab fa-twitter">&nbsp;</i>Twitter
-      </a>
-      <a class="link" href="https://sergiosjs.github.io/ironsworn_oracle/" target="_blank">
-        <i class="fa fa-shield-alt">&nbsp;</i>Oráculo - Ironsworn
-      </a>
-      <a class="link" href="https://sergiosjs.github.io/random-magic/" target="_blank">
-        <i class="fa fa-shield-alt">&nbsp;</i>Random - Magic TCG
-      </a>      
+      <div class="link-section">
+        <div class="section-title">Social</div>
+        <a class="link" href="https://www.youtube.com/@meioorc" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-youtube">&nbsp;</i>YouTube
+        </a>
+        <a class="link" href="https://www.instagram.com/meio.orc" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram">&nbsp;</i>Instagram @meio.orc
+        </a>
+        <a class="link" href="https://www.instagram.com/sergiosjs" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram">&nbsp;</i>Instagram @sergiosjs
+        </a>
+        <a class="link" href="https://twitter.com/sergiosjs" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter">&nbsp;</i>Twitter
+        </a>
+      </div>
 
-      <a class="link" href="https://meioorc.itch.io/" target="_blank">
-        <i class="fa fa-dice">&nbsp;</i>Itch
-      </a>
-      <a class="link" href="https://meioorc.itch.io/einzelmaus-solo-mausritter-ptbr" target="_blank">
-        <i class="fa fa-dice">&nbsp;</i>Einzelmaus - Solo Mausritter
-      </a>
-      <a class="link" href="https://meioorc.itch.io/space-heavy-cargo" target="_blank">
-        <i class="fa fa-dice">&nbsp;</i>SPACE Heavy Cargo
-      </a>
-      <a class="link" href="https://meioorc.itch.io/dominus-a-noite-de-halloween" target="_blank">
-        <i class="fa fa-dice">&nbsp;</i>Dominus - A Noite de Halloween
-      </a>
+      <div class="link-section">
+        <div class="section-title">Aplicações</div>
+        <a class="link" href="https://sergiosjs.github.io/iron-oracle/" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-shield-alt">&nbsp;</i>Oráculo - Ironsworn
+        </a>
+        <a class="link" href="https://sergiosjs.github.io/random-magic/" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-shield-alt">&nbsp;</i>Random - Magic TCG
+        </a>
+      </div>
 
-
-
-      
+      <div class="link-section">
+        <div class="section-title">Jogos</div>
+        <a class="link" href="https://meioorc.itch.io/" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-dice">&nbsp;</i>Itch
+        </a>
+        <a class="link" href="https://meioorc.itch.io/einzelmaus-solo-mausritter-ptbr" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-dice">&nbsp;</i>Einzelmaus - Solo Mausritter
+        </a>
+        <a class="link" href="https://meioorc.itch.io/space-heavy-cargo" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-dice">&nbsp;</i>SPACE Heavy Cargo
+        </a>
+        <a class="link" href="https://meioorc.itch.io/dominus-a-noite-de-halloween" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-dice">&nbsp;</i>Dominus - A Noite de Halloween
+        </a>
+      </div>
     </div>
 
     <div id="hashtag">
