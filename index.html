@@ -8,7 +8,8 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Meio-Orc - 1/2 Orc">
     <meta property="og:description" content="Links do Meio-Orc - YouTube, Instagram, jogos indie e aplicações de RPG">
-    <meta property="og:image" content="assets/meioorc.gif">
+    <meta property="og:image" content="https://meioorc.com/assets/meioorc.gif">
+    <meta property="og:url" content="https://meioorc.com/">
     <meta property="og:type" content="website">
     <title>Meio-Orc - 1/2 Orc</title>
     <!-- Preload dice images -->
@@ -19,9 +20,11 @@
     <link rel="preload" href="assets/dices/d12.png" as="image">
     <link rel="preload" href="assets/dices/d20.png" as="image">
     <!-- Favicon -->
-    <link rel="icon" href="assets/avatart2.png" type="image/x-icon" />
+    <link rel="icon" href="assets/avatart2.png" type="image/png" />
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="preconnect" href="https://use.fontawesome.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Core theme CSS -->
     <link rel="stylesheet" href="style.css">
   </head>
@@ -49,7 +52,7 @@
         <div class="popup-quote">
           Grab your towel and don't panic
         </div>
-        <a class="popup-close" onclick="history.back()">&times;</a>
+        <a class="popup-close" href="#" aria-label="Fechar" onclick="event.preventDefault(); history.replaceState(null, '', location.pathname + location.search);">&times;</a>
       </div>
     </div>
 
@@ -76,8 +79,19 @@
 
       <div class="link-section">
         <div class="section-title">Aplicações</div>
+        <a class="link" href="https://rolai.app" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-shield-alt">&nbsp;</i>Rolai WEB
+        </a>
+        <a class="link" href="https://github.com/SergioSJS/rolai/releases/latest" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-shield-alt">&nbsp;</i>Rolai APK
+        </a>
+
+        <a class="link" href="https://sergiosjs.github.io/iron-moves/" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-shield-alt">&nbsp;</i>Movimentos - Ironsworn/Starforged
+        </a>
+
         <a class="link" href="https://sergiosjs.github.io/iron-oracle/" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-shield-alt">&nbsp;</i>Oráculo - Ironsworn
+          <i class="fa fa-shield-alt">&nbsp;</i>Oráculo - Ironsworn/Starforged
         </a>
         <a class="link" href="https://sergiosjs.github.io/random-magic/" target="_blank" rel="noopener noreferrer">
           <i class="fa fa-shield-alt">&nbsp;</i>Random - Magic TCG
@@ -97,6 +111,14 @@
         </a>
         <a class="link" href="https://meioorc.itch.io/dominus-a-noite-de-halloween" target="_blank" rel="noopener noreferrer">
           <i class="fa fa-dice">&nbsp;</i>Dominus - A Noite de Halloween
+        </a>
+
+        <a class="link" href="https://meioorc.itch.io/piratas-mausritter" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-dice">&nbsp;</i>Piratas - Mausritter
+        </a>
+
+        <a class="link" href="https://meioorc.itch.io/firelights-srd-ptbr" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-dice">&nbsp;</i>Firelights - SRD
         </a>
       </div>
     </div>
